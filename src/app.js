@@ -56,17 +56,32 @@ const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
 made no sense. I'm assuming this is assignment was likely meant for another class.
 Reverted back to functions as I couldn't seem to get the class methods to function */
 
+
+//Setting up variables for use in the following functions
 const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 var day
 var month
 var year
-
+//Declaring function NewDate with parameters whose values will be represented by new date
 function NewDate(d,m,y){
     day = d
     month = m
     year = y
 }
-
+//Providing values for NewDate
 NewDate(1,5,2022)
 
-    
+//Declaring function _IncDay to increase the days within the parameters 
+function _IncDay() {
+    //if statement with year switch to start
+    if(month == 12) {
+        if(day<31) {
+            day = day++
+        } else { 
+            if(year<2030) {
+            month = 1 
+            day = 1
+            year = year++
+        } else {console.log("Maximum Reached")}
+    } 
+}
