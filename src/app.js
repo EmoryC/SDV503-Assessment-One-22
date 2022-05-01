@@ -55,7 +55,7 @@ const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
 */
 }
 
-console.log(new _Date(1,5,2022))
+console.log(new _Date(2,30,2022))
 
 //SECTION Requirement #2 & #3 (plus req#1 redux)
 /*When researching "overload operators" I came up with a bunch of C++ stuff that 
@@ -339,4 +339,5 @@ _DecDay()
 /*NOTE These functions while not applicable in this setting follow the logic of increasing
     and decreasing the value of the day variable when input. I am unsure how to test this
     with console.log
+
 */
