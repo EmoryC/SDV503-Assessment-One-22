@@ -179,6 +179,23 @@ function _IncDay(day,month,year) {
     }
 }
 }   
+console.log(_DecDay(1,5,2022))
             /*NOTE Admitadly unsure if this is what the requirements asks for.
             I believe this function works logically, but doesn't really
             work in the big picture and the requirment seems unclear.*/
+
+function _DecDay() {
+    if(month == 1) {
+        if(day>1) {
+          day = day--
+        } else {
+        if (year>2000) {
+        month = 12 
+        day = 31
+        year = year--
+        } else {console.log("Minimum Reached")}
+    } 
+}
+
+
+}   
