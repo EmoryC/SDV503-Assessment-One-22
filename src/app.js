@@ -56,4 +56,17 @@ const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
 made no sense. I'm assuming this is assignment was likely meant for another class.
 Reverted back to functions as I couldn't seem to get the class methods to function */
 
+const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+var day
+var month
+var year
 
+function NewDate(d,m,y){
+    day = d
+    month = m
+    year = y
+}
+
+NewDate(1,5,2022)
+
+    
