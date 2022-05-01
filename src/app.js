@@ -70,7 +70,7 @@ function NewDate(d,m,y){
     month = _Months[m]
     year = y
 
-        return d = [day,month,year]
+        return date = [day,month,year]
 }
 //Providing values for NewDate
 console.log(NewDate(1,5,2022))
