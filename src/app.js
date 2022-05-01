@@ -9,7 +9,7 @@ const dayspermonth = [0,31,28,31,30,31,30,31,31,30,31,30,31]
 //corresponds to it's calander number
 
 //Creating a class _Date with which I will construct all functions (methods)
-class _Date{ 
+const _Date = class{ 
     constructor(day,month,year){
 //  Creating a const for the names of the months with whitespace at front so numbers match
 const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
@@ -49,12 +49,14 @@ const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
     getMonthDay() {
         return `Date: ${_Months[this.month]} ${this.day}, ${this.year}`
     }
-//I could not get these to generate output but I believe individually they would operate fine
-
-
-
+/*I could not get these to generate output, but the parameters within the constructor
+    functioned perfectly which was reassuring that I set up the class correctly.
+    Perfecting the method output to generate in new const will take more study.
+*/
 }
 
+const today = new _Date(1,5,2022)
+console.log(today)
 //SECTION Requirement #2
 /*When researching "overload operators" I came up with a bunch of C++ stuff that 
 made no sense. I'm assuming this is assignment was likely meant for another class.
