@@ -1,6 +1,4 @@
 //SECTION Requirement #1
-//  Creating a const for the names of the months
-const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 //Creating a const for the days within each month
 const dayspermonth = [0,31,28,31,30,31,30,31,31,30,31,30,31]
 //Both have been left with whitespaces of null values in front so that each month correctly
@@ -9,6 +7,8 @@ const dayspermonth = [0,31,28,31,30,31,30,31,31,30,31,30,31]
 //Creating a class _Date with which I will construct all functions (methods)
 class _Date{ 
     constructor(day,month,year){
+//  Creating a const for the names of the months with whitespace at front so numbers match
+const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 //Setting parameters for calander days
         if(day>31){
           console.log("Invalid Input")
@@ -51,11 +51,3 @@ class _Date{
 
 }
 
-
-    
-
-
-
-
-const today = new _Date()
-console.log(today)
