@@ -18,15 +18,25 @@ class _Date{
         this.month = month
         this.year = year 
     } //This will be the raw input for the methods that follow
-}
-    getIntDate() { //This should display the date as a string of integers with slashes between
-        return `${this.day}/${this.month}/${this.year}'
+}//This should display the date as a string of integers with slashes between
+    getIntDate() { 
+        return `Date: ${this.day}/${this.month}/${this.year}`; //forgot the second backtick here and almost broke everything
+    }
+ //This should display the date as a string starting with integer day, 
+    getDayMonth() {
+        return `Date: ${this.day} ${_Months[this.month]} ${this.year}`;
+    }
+    getMonthDay() {
+        return `Date: ${_Months[this.month]} ${this.day}, ${this.year}`
     }
     
-    getDayMonth() {
+    
 
-    }
+
+    
 
 
 
 }
+const today = new _Date()
+console.log(today)
