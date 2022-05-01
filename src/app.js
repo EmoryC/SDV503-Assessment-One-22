@@ -70,13 +70,12 @@ function NewDate(d,m,y){
     month = _Months[m]
     year = y
 
-        return date = [day,month,year]
 }
 //Providing values for NewDate
 console.log(NewDate(1,5,2022))
 
 //Declaring function _IncDay to increase the days within the parameters 
-function _IncDay(day,month,year) {
+function _IncDay(d,m,y) {
     //if statement with year switch to start
     //NOTE Using index notation for the months to correspond to _Months accurately
     if(month == 12) {
@@ -181,7 +180,7 @@ function _IncDay(day,month,year) {
 }
     
 }   
-_DecDay(2,5,2022)
+console.log(_IncDay(1,5,2022))
             /*NOTE Admitadly unsure if this is what the requirements asks for.
             I believe this function works logically, but doesn't really
             work in the big picture and the requirment seems unclear.*/
