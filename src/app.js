@@ -51,3 +51,9 @@ const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
 
 }
 
+//SECTION Requirement #2
+/*When researching "overload operators" I came up with a bunch of C++ stuff that 
+made no sense. I'm assuming this is assignment was likely meant for another class.
+Reverted back to functions as I couldn't seem to get the class methods to function */
+
+
