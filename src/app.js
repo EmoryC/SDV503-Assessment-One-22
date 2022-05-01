@@ -70,9 +70,10 @@ function NewDate(d,m,y){
     month = _Months[m]
     year = y
 
+        return d = [day,month,year]
 }
 //Providing values for NewDate
-NewDate(1,5,2022)
+console.log(NewDate(1,5,2022))
 
 //Declaring function _IncDay to increase the days within the parameters 
 function _IncDay(day,month,year) {
@@ -178,21 +179,23 @@ function _IncDay(day,month,year) {
         day = 1
     }
 }
+    
 }   
-console.log(_DecDay(1,5,2022))
+_DecDay(2,5,2022)
             /*NOTE Admitadly unsure if this is what the requirements asks for.
             I believe this function works logically, but doesn't really
             work in the big picture and the requirment seems unclear.*/
 
+//This function will (hopefully) operate in reverse to _IncDay
 function _DecDay() {
     if(month == 1) {
         if(day>1) {
           day = day--
         } else {
-        if (year>2000) {
-        month = 12 
-        day = 31
-        year = year--
+            if (year>2000) {
+            month = 12 
+            day = 31
+            year = year--
         } else {console.log("Minimum Reached")}
     } 
 }
