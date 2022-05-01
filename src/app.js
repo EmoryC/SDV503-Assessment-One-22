@@ -64,6 +64,7 @@ Assumed this just meant we needed to have a function that could increase and dec
 the date. Reverted back to functions as I couldn't seem to get the class methods to work */
 
 
+
 //Setting up variables for use in the following functions
 const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
 var day
@@ -77,6 +78,19 @@ function NewDate(d,m,y){
     year = y
 
 }
+function DaysDiff(D1,D2){
+    var D1 = new Date(1/5/2022)
+    var D2 = new Date(10/5/2022)
+    const DaysDiffNum = Math.abs(D2-D1)
+        return DaysDiffNum
+}
+    console.log(DaysDiff(D1,D2))
+/*NOTE ^^^ This was an attempt after some tries to develop a function for the
+        subtraction operator thingy. Again, could not generate a result, despite 
+        following what seemsto be ok logic. I think the issue is with know how to 
+        execute such functions with proper syntax, and not in converting ideas into
+        operations in code.
+*/
 //Providing values for NewDate
 NewDate(1,5,2022)
 
