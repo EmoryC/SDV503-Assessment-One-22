@@ -12,9 +12,9 @@ class _Date{
 //Setting parameters for calander days
         if(day>31){
           console.log("Invalid Input")
-      } 
-      
-      else if(day<1){
+      } else if(_Months[month] =='Feb' && day>28){ //best guess this is how it works???
+        console.log("Invalid Input")
+      } else if(day<1){
             console.log("Invalid Input")
       } else {this.day = day}
 //Setting parameters for calander months      
