@@ -50,14 +50,14 @@ const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
         return `Date: ${_Months[this.month]} ${this.day}, ${this.year}`
     }
 /*I could not get these to generate output, but the parameters within the constructor
-    functioned perfectly which was reassuring that I set up the class correctly.
+    functioned perfectly which was reassuring that I set up the class well.
     Perfecting the method output to generate in new const will take more study.
 */
 }
 
-const today = new _Date(1,5,2022)
-console.log(today)
-//SECTION Requirement #2
+console.log(new _Date(1,5,2022))
+
+//SECTION Requirement #2 & #3
 /*When researching "overload operators" I came up with a bunch of C++ stuff that 
 made no sense. I'm assuming this is assignment was likely meant for another class.
 Assumed this just meant we needed to have a function that could increase and decrease 
@@ -73,12 +73,37 @@ var year
 //Indexing _Months for the month notation for easier use
 function NewDate(d,m,y){
     day = d
-    month = _Months[m]
+    month = m
     year = y
 
 }
 //Providing values for NewDate
-console.log(NewDate(1,5,2022))
+NewDate(1,5,2022)
+
+//NOTE Decided to create fuctions that test the same requirements as the class _Date 
+//      for practice.
+
+//Declarting function IntDate to call the input of NewDate as a concatenated 
+//string of integers
+function IntDate(){ 
+    console.log(day+"/"+month+"/"+year)
+    }
+
+IntDate() //results is correct 1/5/2022
+
+//Declaring function DayMonth to call the input of NewDate as an integer for day,
+//string for month, and integer for year
+function DayMonth(){
+console.log(day+" "+_Months[month]+" "+year)
+}
+DayMonth() //result is correct 1 May 2022
+
+//Declaring the function MonthDat to call the inpur of NewDate as a String for month
+//and integers for day and year seperated by a comma
+function MonthDay(){
+console.log(_Months[month]+" "+ day+", "+year)
+}
+MonthDay() //results is correct May 1, 2022
 
 //Declaring function _IncDay to increase the days within the parameters 
 function _IncDay(d,m,y) {
