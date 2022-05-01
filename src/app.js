@@ -57,7 +57,7 @@ const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
 
 console.log(new _Date(1,5,2022))
 
-//SECTION Requirement #2 & #3
+//SECTION Requirement #2 & #3 (plus req#1 redux)
 /*When researching "overload operators" I came up with a bunch of C++ stuff that 
 made no sense. I'm assuming this is assignment was likely meant for another class.
 Assumed this just meant we needed to have a function that could increase and decrease 
@@ -212,7 +212,7 @@ function _IncDay(d,m,y) {
     
 }   
 _IncDay()
-console.log(_IncDay(1,5,2022))
+
             /*NOTE Admitadly unsure if this is what the requirements asks for.
             I believe this function works logically, but doesn't really
             work in the big picture and the requirment seems unclear.*/
@@ -322,3 +322,7 @@ function _DecDay() {
 }   
 _DecDay()
 
+/*NOTE These functions while not applicable in this setting follow the logic of increasing
+    and decreasing the value of the day variable when input. I am unsure how to test this
+    with console.log
+*/
