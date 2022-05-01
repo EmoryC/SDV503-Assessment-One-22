@@ -54,7 +54,8 @@ const _Months = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct',
 //SECTION Requirement #2
 /*When researching "overload operators" I came up with a bunch of C++ stuff that 
 made no sense. I'm assuming this is assignment was likely meant for another class.
-Reverted back to functions as I couldn't seem to get the class methods to function */
+Assumed this just meant we needed to have a function that could increase and decrease 
+the date. Reverted back to functions as I couldn't seem to get the class methods to work */
 
 
 //Setting up variables for use in the following functions
@@ -63,17 +64,20 @@ var day
 var month
 var year
 //Declaring function NewDate with parameters whose values will be represented by new date
+//Indexing _Months for the month notation for easier use
 function NewDate(d,m,y){
     day = d
-    month = m
+    month = _Months[m]
     year = y
+
 }
 //Providing values for NewDate
 NewDate(1,5,2022)
 
 //Declaring function _IncDay to increase the days within the parameters 
-function _IncDay() {
+function _IncDay(day,month,year) {
     //if statement with year switch to start
+    //NOTE Using index notation for the months to correspond to _Months accurately
     if(month == 12) {
         if(day<31) {
             day = day++
@@ -85,3 +89,96 @@ function _IncDay() {
         } else {console.log("Maximum Reached")}
     } 
 }
+    else if(month == 1) {
+         if(day<31) {
+            day = day++
+         } else {
+            month = 2 
+            day = 1
+            //Now that it's in a new year, the year change is no longer required
+    }
+}
+    else if(month == 2) {
+    if(day<28) {
+        day = day++
+    } else {
+        month = 3 
+        day = 1
+    }
+}
+    else if(month == 3) {
+    if(day<31) {
+        day = day++
+    } else {
+        month = 4 
+        day = 1
+    }
+}
+    else if(month == 4) {
+    if(day<30) {
+        day = day++
+    } else {
+        month = 5
+        day = 1
+    }
+}
+    else if(month == 5) {
+    if(day<31) {
+        day = day++
+    } else {
+        month = 6 
+        day = 1
+    }
+}
+    else if(month == 6) {
+    if(day<30) {
+        day = day++
+    } else {
+        month = 7 
+        day = 1
+    }
+}
+    else if(month == 7) {
+    if(day<31) {
+        day = day++
+    } else {
+        month = 8 
+        day = 1
+    }
+}
+    else if(month == 8) {
+    if(day<31) {
+        day = day++
+    } else {
+        month = 9 
+        day = 1
+    }
+}
+    else if(month == 9) {
+    if(day<30) {
+        day = day++
+    } else {
+        month = 10 
+        day = 1
+    }
+}
+    else if(month == 10) {
+    if(day<31) {
+        day = day++
+    } else {
+        month = 11 
+        day = 1
+    }
+}
+    else if(month == 11) {
+    if(day<30) {
+        day = day++
+    } else {
+        month = 12
+        day = 1
+    }
+}
+}   
+            /*NOTE Admitadly unsure if this is what the requirements asks for.
+            I believe this function works logically, but doesn't really
+            work in the big picture and the requirment seems unclear.*/
