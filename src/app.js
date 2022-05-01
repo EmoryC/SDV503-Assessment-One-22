@@ -1,6 +1,10 @@
 //SECTION Requirement #1
-//Creating a const for the days within each month
+/*Creating a const for the days within each month.
+To be honest I made this array with a plan to use it but couldn't 
+walk myself through the logic of it like I could with _Months
+*/
 const dayspermonth = [0,31,28,31,30,31,30,31,31,30,31,30,31]
+
 //Both have been left with whitespaces of null values in front so that each month correctly
 //corresponds to it's calander number
 
@@ -90,9 +94,9 @@ function _IncDay(d,m,y) {
     } 
 }
     else if(month == 1) {
-         if(day<31) {
+    if(day<31) {
             day = day++
-         } else {
+    } else {
             month = 2 
             day = 1
             //Now that it's in a new year, the year change is no longer required
@@ -180,6 +184,7 @@ function _IncDay(d,m,y) {
 }
     
 }   
+_IncDay()
 console.log(_IncDay(1,5,2022))
             /*NOTE Admitadly unsure if this is what the requirements asks for.
             I believe this function works logically, but doesn't really
@@ -198,6 +203,94 @@ function _DecDay() {
         } else {console.log("Minimum Reached")}
     } 
 }
-
+    else if(month == 12) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 11
+        day = 30
+    }
+ }
+   else if(month == 11) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 10 
+        day = 31
+    }
+ }
+   else if(month == 10) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 9 
+        day = 30
+    }
+ }
+   else if(month == 9) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 8 
+        day = 31
+    }
+ }
+   else if(month == 8) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 7 
+        day = 31
+    }
+ }
+   else if(month == 7) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 6 
+        day = 30
+    }
+ }
+   else if(month == 6) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 5 
+        day = 31
+    }
+ }
+   else if(month == 5) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 4 
+        day = 30
+    }
+ }
+   else if(month == 4) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 3 
+        day = 31
+    }
+ }
+   else if(month == 3) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 2 
+        day = 28
+    }
+ }
+  else if(month == 2) {
+    if(day>1) {
+        day = day--
+    } else {
+        month = 1 
+        day = 31
+    }
+ }
 
 }   
+_DecDay()
